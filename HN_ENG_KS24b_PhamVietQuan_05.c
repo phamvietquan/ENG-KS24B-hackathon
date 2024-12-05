@@ -4,7 +4,7 @@ int main(){
 	int arr[100];
 	int menu, n;
 	int flag=-1;
-	int INT_MAX=0;
+	int INT_MAX=1;
 	printf(" Menu\n");
 	printf("1. Nhap so phan tu va gia tri cho mang\n");
 	printf("2. In gia tri cac phan tu cua mang theo dang(arr[0] = 1, arr[1] = 5...\n");
@@ -66,7 +66,7 @@ int main(){
         				if (n < 2) {
             			printf("Mang phai co it nhat 2 phan tu de tim gia tri nho thu 2!\n");
         			} else {
-            			int min1 = arr[0], min2 =INT_MAX;
+            			int min1 = arr[0], min2 = INT_MAX;
             			for (int i = 1; i < n; i++) {
                 			if (arr[i] < min1) {
                     			min2 = min1; 
@@ -104,25 +104,7 @@ int main(){
     		}
 				break;
 			case 6:
-				if (flag != -1) {
-        			int pos;
-        			printf("Nhap vi tri muon xoa (0 <= vi tri < %d): ", n);
-        			scanf("%d", &pos);
-        			if (pos >= 0 && pos < n) {
-            			for (int i = pos; i < n - 1; i++) {
-                			arr[i] = arr[i + 1];
-            			}
-            			n--; 
-            			printf("Xoa thanh cong! Mang sau khi xoa la:\n");
-            			for (int i = 0; i < n; i++) {
-                			printf("arr[%d] = %d\n", i, arr[i]);
-            			}
-        			} else {
-            			printf("Vi tri khong hop le!\n");
-       			 }
-    		} else {
-        		printf("Ban chua nhap phan tu vao mang!\n");
-    		}
+				
 				break;
 			case 7:
 				if(flag!=-1){
@@ -156,4 +138,3 @@ int main(){
 	}
 	return 0;
 }
-
